@@ -53,6 +53,11 @@ _OFFSET_PARAMETERS = {
         inspect.Parameter.POSITIONAL_OR_KEYWORD,
         default=None,
     ),
+    "day_of_month": inspect.Parameter(
+        "day_of_month",
+        inspect.Parameter.POSITIONAL_OR_KEYWORD,
+        default=None,
+    ),
 }
 
 _OFFSET_SIGNATURES = {
@@ -93,6 +98,16 @@ _OFFSET_SIGNATURES = {
         "n",
         "normalize",
         "startingMonth",
+    ),
+    pd.tseries.offsets.SemiMonthEnd: (
+        "n",
+        "normalize",
+        "day_of_month",
+    ),
+    pd.tseries.offsets.SemiMonthBegin: (
+        "n",
+        "normalize",
+        "day_of_month",
     ),
 }
 
